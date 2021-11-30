@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Mithun Software Solutions. Bengaluru </h1>
+<h1 align="center">Welcome Mithun Software Solutions. Bengaluru </h1>
 <h1 align="center"> Mithun Software Solutions- Very Good Morning...</h1>
 <hr>
 <br>
