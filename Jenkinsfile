@@ -23,7 +23,7 @@ def mavenHome = tool name: "maven3.6.2"
 }
 
 
-  stage('deploy Appl to tomcat')
+  stage('deploy Application to tomcat')
 { 
   sshagent(['647a4516-29ef-4b28-9d4a-9d47c74e5802']) 
   {
