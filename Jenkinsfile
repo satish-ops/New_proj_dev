@@ -13,7 +13,7 @@ pipeline {
         }
     steps{
         sh '''
-         cat READ.md
+         cat pom.xml
          '''
        }
      }
