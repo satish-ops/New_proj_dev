@@ -21,8 +21,8 @@ pipeline {
             when{
                 branch 'PR-*'
             }
-            steps{
-                echo 'this only runs for pr'
+            steps {
+                echo 'this only runs for pR'
             }    
          }
       }
