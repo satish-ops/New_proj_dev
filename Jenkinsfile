@@ -7,8 +7,7 @@ pipeline {
                 echo 'Hello World'
             }
         }
-    }
-    stage('for the fix branch'){
+       stage('for the fix branch'){
         when{
             branch "fix-*"
         }
@@ -16,6 +15,7 @@ pipeline {
         sh '''
          cat READ.md
          '''
-    }
-    }
+       }
+     }
+   }
 }
