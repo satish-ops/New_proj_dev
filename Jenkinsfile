@@ -19,7 +19,7 @@ pipeline {
      }
         stage('for pr'){
             when{
-                branch 'pr-*'
+                branch 'PR-*'
             }
             steps{
                 echo 'this only runs for pr'
