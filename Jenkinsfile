@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Hell') {
             steps {
                 echo 'Hello World'
             }
@@ -13,16 +13,16 @@ pipeline {
         }
     steps{
         sh '''
-         cat READ.md
+         cat pom.xml
          '''
        }
      }
         stage('for pr'){
             when{
-                branch 'pr-*'
+                branch 'PR-*'
             }
-            steps{
-                echo 'this only runs for pr'
+            steps {
+                echo 'this only runs for pR'
             }    
          }
       }
