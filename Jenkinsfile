@@ -17,13 +17,6 @@ pipeline {
          '''
        }
      }
-        stage('for pr'){
-            when{
-                branch 'PR-*'
-            }
-            steps {
-                echo 'this only runs for pR'
-            }    
-         }
-      }
-  }
+
+   }
+}
