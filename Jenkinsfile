@@ -3,7 +3,12 @@ pipeline {
     stages {
         stage('Example Build') {
             when {
+		anyof
+		    {
                 allOf { 
+			branch 'PR-*'
+			expression { choice =='2'}
+		}
 			branch 'master'; branch 'staging' 
 		}
             }
