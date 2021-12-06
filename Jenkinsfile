@@ -1,4 +1,7 @@
-      stage("AllOf") {
+      pipeline {
+          agent any
+            
+            stage("AllOf") {
         when {
             allOf {
                 environment name:'VALUE_ONE', value: '1'
@@ -7,5 +10,8 @@
         }
         steps {
             echo "AllOf Works!!"
-        }
+          }
+            }
       }
+}
+
