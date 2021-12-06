@@ -1,22 +1,23 @@
 pipeline {
     agent any
-
     stages {
-        stage('Hell00') {
+        stage('Example Build') {
+            when {
+                anyOf { 
+			branch 'master'; branch 'staging' 
+		}
+            }
             steps {
                 echo 'Hello World'
             }
         }
-       stage('for the fix branch'){
-        when{
-            branch "fix-*"
+        stage('Example Deploy') {
+            when {
+                branch 'production'
+            }
+            steps {
+                echo 'Deploying'
+            }
         }
-    steps{
-        sh '''
-         cat pom.xml
-         '''
-       }
-     }
-
-   }
+    }
 }
