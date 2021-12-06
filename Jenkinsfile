@@ -1,28 +1,11 @@
-pipeline {
-    agent any
-    stages {
-        stage('Example Build') {
-            when {
-	anyof
-		    {
-                allOf { 
-			branch 'PR-*'
-			expression { choice =='2'}
-		}
-			branch 'master'; branch 'staging' 
-		}
-            }
-            steps {
-                echo 'Hello World'
+      stage("AllOf") {
+        when {
+            allOf {
+                environment name:'VALUE_ONE', value: '1'
+                environment name:'VALUE_TWO', value: '2'
             }
         }
-        stage('Example Deploy') {
-            when {
-                branch 'production'
-            }
-            steps {
-                echo 'Deploying'
-            }
+        steps {
+            echo "AllOf Works!!"
         }
-    }
-}
+      }
