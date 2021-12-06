@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Example Build') {
             when {
-                anyOf { 
+                allOf { 
 			branch 'master'; branch 'staging' 
 		}
             }
