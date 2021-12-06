@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Example Build') {
             when {
-		anyof
+	anyof
 		    {
                 allOf { 
 			branch 'PR-*'
