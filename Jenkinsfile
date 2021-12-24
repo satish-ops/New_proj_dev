@@ -9,7 +9,7 @@
           }
         }
 
-        stage('Test') {
+        stage('only for PR') {
               when {
                    branch 'PR-*'
               }
@@ -31,7 +31,7 @@
       }
     }
 
-    stage('Deploy') {
+    stage('Deploy only for fix') {
       when {
         branch 'fix-123'
       }
