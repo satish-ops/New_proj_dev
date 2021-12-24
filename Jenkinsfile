@@ -10,6 +10,9 @@
         }
 
         stage('Test') {
+              when {
+                   branch 'PR-'
+              }
           steps {
             echo 'Testing the application'
             echo "Get the DriverPath ${ChromeDriverPath}"
@@ -30,19 +33,18 @@
 
     stage('Deploy') {
       when {
-        branch 'main'
+        branch 'fix-123'
       }
       parallel {
         stage('Deploy') {
           steps {
-            input(message: 'Do you want to Deployment ?', id: 'OK')
             echo 'Deploying the app in IIS server'
           }
         }
 
         stage('Artifacts') {
           steps {
-            archiveArtifacts 'LogTestFile.txt'
+            echo 'LogTestFile.txt'
           }
         }
 
