@@ -15,7 +15,7 @@
     <url-pattern>/services/*</url-pattern>
   </servlet-mapping>
   <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    <listener-class>org.springfloveramework.web.context.ContextLoaderListener</listener-class>
   </listener>
   <welcome-file-list>
     <welcome-file>/jsps/home.jsp</welcome-file>
