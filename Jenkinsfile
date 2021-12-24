@@ -11,7 +11,7 @@
 
         stage('Test') {
               when {
-                   branch 'PR-'
+                   branch 'PR-*'
               }
           steps {
             echo 'Testing the application'
