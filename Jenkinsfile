@@ -5,7 +5,7 @@
       parallel {
         stage('Build') {
           steps {
-            echo 'Building the .NET Core applcaion'
+            echo 'Building the .NETCore applcaion'
           }
         }
 
